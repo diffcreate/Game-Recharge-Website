@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
               <hr class="my-4">
 
               <div class="d-grid mb-2">
-                <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+              <button type="submit" class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" name="submit" value="submit">Accept</button>
                   <i class="fab fa-google me-2"style="color:white;">Sign up with Google</i> 
                 </button>
               </div>
