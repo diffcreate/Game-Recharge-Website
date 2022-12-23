@@ -78,7 +78,7 @@ if (!isset($_SESSION['username'])) {
 
       
         <div class="mb-3">
-          <span class="input-group-text" id="basic-addon1" style= "background-color: white; border : hidden; margin-right: 20px;"><img src="../assets/logo/email.png" class="card-img-top" alt="#" style ="width: 25px; height: 27px; margin-right : 15px"><input type="text" class="form-control" placeholder="Your Emai" aria-label="Username" aria-describedby="basic-addon1"></span>
+          <span class="input-group-text" id="basic-addon1" style= "background-color: white; border : hidden; margin-right: 20px;"><img src="../assets/logo/email.png" class="card-img-top" alt="#" style ="width: 25px; height: 27px; margin-right : 15px"><input type="text" class="form-control" placeholder="Your Email" aria-label="Username" aria-describedby="basic-addon1"></span>
         </div>
         <div class="mb-3">
 
@@ -97,37 +97,53 @@ if (!isset($_SESSION['username'])) {
             <div class="card-body">
             <p>Pilih Jumlah Diamond Anda</p>
             <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">500 Diamond</button>
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">1000 Diamond</button> 
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">3000 Diamond</button>
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">5000 Diamond</button>
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">10000 Diamond</button>
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">50000 Diamond</button>
-            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;">100000 Diamond</button>
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">1000 Diamond</button> 
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">3000 Diamond</button>
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">5000 Diamond</button>
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">10000 Diamond</button>
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">50000 Diamond</button>
+            <button type="button" class="btn btn-outline-warning w-25"style = "margin-top :10px;" id="top-up">100000 Diamond</button>
             </div>
       </div>
 
-
           <div class="card w-100" style=" top: 45px" id = "keterangan diamond">
             <div class="card-body">
-              <p>Pilih Merode Pembayaran Anda</p>
+              <p>Pilih Metode Pembayaran Anda</p>
             
-              <div class="dropdown" style>
-              <button class="btn btn-outline-warning w-100" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="float: left; text-align: left;">
+              <div class="dropdown">
+              <button class="btn btn-outline-warning dropdown-toggle w-100" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="float: left; text-align: left;">
               <img src="../assets/logo/contact.png" class="card-img-top" alt="#" style ="width: 25px; height: 25px; margin-right : 15px"> E-Wallet
               </button>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+               </ul>
               </div>
 
-              <div class="dropdown" style> 
-                <button class="btn btn-outline-warning w-100" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="float: left; text-align: left;">
-                <img src="../assets/logo/contact.png" class="card-img-top" alt="#" style ="width: 25px; height: 25px; margin-right : 15px"> M-banking
-                </button>
+              <div class="dropdown">
+              <button class="btn btn-outline-warning dropdown-toggle w-100" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="float: left; text-align: left;">
+              <img src="../assets/logo/contact.png" class="card-img-top" alt="#" style ="width: 25px; height: 25px; margin-right : 15px"> E-Wallet
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+               </ul>
               </div>
 
-              <div class="dropdown" style>
-                <button class="btn btn-outline-warning w-100" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" style="float: left; text-align: left;">
-                <img src="../assets/logo/contact.png" class="card-img-top" alt="#" style ="width: 25px; height: 25px; margin-right : 15px"> Pembayaran Via Operator
-                </button>
+              <div class="dropdown">
+              <button class="btn btn-outline-warning dropdown-toggle w-100" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="float: left; text-align: left;">
+              <img src="../assets/logo/contact.png" class="card-img-top" alt="#" style ="width: 25px; height: 25px; margin-right : 15px"> E-Wallet
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+               </ul>
               </div>
+
+              
 
             </div>
           </div>
@@ -145,13 +161,13 @@ if (!isset($_SESSION['username'])) {
 <div class="container mw-100" style="background-color:#00000020 ;">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">About</a></li>
     </ul>
-    <p class="text-center text-muted">© 2022 Company, Inc</p>
+    <p class="text-center" id="fido">© 2022 Company, Inc</p>
   </footer>
 </div>
 </body>

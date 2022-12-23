@@ -99,73 +99,73 @@
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/mlbb.jpg" class="img-categori mt-4"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;" onclick="window.location.href = 'mobilelegend-page.php'">Mobile Legend</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px" onclick="window.location.href = 'mobilelegend-page.php'">Mobile Legend</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/ff.png" class="img-categori mt-4"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Free Fire</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Free Fire</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/valorant.jpg" class="img-categori mt-4"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Valorant</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Valorant</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/pubgm.jpg" class="img-categori mt-4"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">PUBG Mobile</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">PUBG Mobile</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/pb.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Point Blank</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Point Blank</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/GenshinImpact.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">GenshinImpact</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">GenshinImpact</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/lost_saga.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Lost Saga</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Lost Saga</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/aov-storenew.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">AOV</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">AOV</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/call_of_duty.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Call of Duty</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Call of Duty</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/bleach_mobile.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Bleach</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Bleach</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/speed_drifters.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Speed Drifters</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Speed Drifters</button>
              </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
              <div class="menugame">
                <a href="#"><img src="../assets/game/lords_mobile.jpg" class="img-categori mt-4" style= "width: 178; height: 178px"></a>
-               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;">Lords Mobile</button>
+               <button type="button" class="btn btn-outline-warning" style="margin-top:15px;  width:180px">Lords Mobile</button>
              </div>
         </div>
     </div>
@@ -248,13 +248,13 @@
 <div class="container mw-100" style="background-color:#00000020 ;">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">About</a></li>
     </ul>
-    <p class="text-center text-muted">© 2022 Company, Inc</p>
+    <p class="text-center" id="fido">© 2022 Company, Inc</p>
   </footer>
 </div>
 </body>
