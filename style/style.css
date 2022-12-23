@@ -9,6 +9,12 @@ nav{
     background-color: #262626;
 }
 
+.context2 {
+    width: 60%;
+    position: absolute;
+    top:20vh;
+}
+
 .context {
     width: 100%;
     position: absolute;
