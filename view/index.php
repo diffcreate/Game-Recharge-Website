@@ -37,9 +37,33 @@
         <a href="#" class="link" id="menu" >Contact</a>
         </li>
         <li class="nav-item">
-        <a href="register.php" class="link"  id="menu" >Register</a>
-        <li class="nav-item">
-         <a href="login.php" class="link"  id="menu" >Login</a>
+      <?php session_start();
+              if (isset($_SESSION['username'])) {
+                  $checkadmin = $_SESSION['is_admin'];
+                  if ($checkadmin == 1) {
+                      echo  "<li class='nav-item'>";
+                      echo  "<a href='admin.php' class='link' id='menu'>Admin</a>";
+                      echo  "</li>";
+                      echo  "<li class='nav-item'>";
+                      echo  "<a href='logout.php' class='link' id='menu'>Logout</a>";
+                      echo  "</li>";
+                  } else {
+                      echo  "<li class='nav-item'>";
+                      echo  "<a href='lihatpesan.php' class='link' id='menu'>Lihat Pesan</a>";
+                      echo  "</li>";
+                      echo  "<li class='nav-item'>";
+                      echo  "<a href='logout.php' class='link' id='menu'>Logout</a>";
+                      echo  "</li>";
+                  }
+              } else {
+                  echo  "<li class='nav-item'>";
+                  echo  " <a href='register.php' class='link' id='menu'>Register</a>";
+                  echo  "</li>";
+                  echo  "<li class='nav-item'>";
+                  echo  "<a href='login.php' class='link' id='menu'>Login</a> ";
+                  echo  "</li>";
+              }
+              ?>
         </li>
       </ul>
     </div>
