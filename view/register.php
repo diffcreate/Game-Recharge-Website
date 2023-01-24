@@ -1,6 +1,6 @@
 <?php
 
-include 'database/config.php';
+include 'config.php';
 
 error_reporting(0);
 
@@ -17,11 +17,11 @@ if (isset($_POST['submit'])) {
   $cpassword = md5($_POST['cpassword']);
 
   if ($password == $cpassword) {
-    $sql = "SELECT * FROM usertb WHERE email='$email'";
+    $sql = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
 
     if (!$result->num_rows > 0) {
-      $sql = "INSERT INTO usertb (username, email, password, is_admin)
+      $sql = "INSERT INTO users (username, email, password, is_admin)
                     VALUES ('$username', '$email', '$password', '0')";
       $result = mysqli_query($conn, $sql);
       if ($result) {
@@ -82,14 +82,14 @@ if (isset($_POST['submit'])) {
               </div>
 
               <div class="d-grid mb-2">
-                <button class="btn btn-lg btn-outline-danger btn-login fw-bold text-uppercase" type="submit" name="submit">Register</button>
+                <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" type="submit" name="submit">Register</button>
               </div>
               <div class="d-grid mb-2">
-                <button class="btn btn-lg btn-outline-danger btn-login fw-bold text-uppercase" onclick="window.location.href = 'index.php'" type="button">Back</button>
+                <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" onclick="window.location.href = 'index.php'" type="button">Back</button>
               </div>
 
 
-              <a class="d-block text-center mt-2 small link-danger" href="#">Have an account? Sign Ins</a>
+              <a class="d-block text-center mt-2 small link-warning" href="#">Have an account? Sign Ins</a>
 
               <hr class="my-4">
             </form>

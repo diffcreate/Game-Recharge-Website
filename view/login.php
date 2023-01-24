@@ -1,26 +1,26 @@
 <?php
 
-include 'database/config.php';
+include 'config.php';
 
 error_reporting(0);
 
 session_start();
 
 if (isset($_SESSION['username'])) {
-  header("Location: database/berhasil_login.php");
+  header("Location: index.php");
 }
 
 if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $password = md5($_POST['password']);
 
-  $sql = "SELECT * FROM usertb WHERE email='$email' AND password='$password'";
+  $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
   $result = mysqli_query($conn, $sql);
   if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['username'] = $row['username'];
     $_SESSION['is_admin'] = $row['is_admin'];
-    header("Location: database/berhasil_login.php");
+    header("Location: index.php");
   } else {
     echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
   }
@@ -78,12 +78,12 @@ if (isset($_POST['submit'])) {
                   </div>
 
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-lg btn-outline-danger btn-login text-uppercase fw-bold mb-2" name="submit" value="submit">Accept</button>
+                    <button type="submit" class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" name="submit" value="submit">Accept</button>
                     <div class="d-grid">
-                      <button onclick="window.location.href = ' index.php ' " class="btn btn-lg btn-outline-danger btn-login text-uppercase fw-bold mb-2" type="button">Back</button>
+                      <button onclick="window.location.href = ' index.php ' " class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" type="button">Back</button>
                     </div>
                     <div class="text-center">
-                      <a class="small link-danger" href="#">Forgot password?</a>
+                      <a class="small link-warning" href="#">Forgot password?</a>
                     </div>
                   </div>
 
