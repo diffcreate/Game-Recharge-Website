@@ -6,15 +6,16 @@ error_reporting(0);
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
   header("Location: index.php");
 }
 
-
 if (isset($_POST['submit'])) {
+  $disp = $_POST['disp'];
   $nama = $_POST['nama'];
   $desc = $_POST['desc'];
   $jml = $_POST['jml'];
+  $gmbr = $_POST['gmbr'];
   $jenis = $_POST['jenis'];
   $sql = "SELECT * FROM game WHERE nama_game='$nama'";
   $result = mysqli_query($conn, $sql);
@@ -22,8 +23,8 @@ if (isset($_POST['submit'])) {
   if (!$result->num_rows > 0) {
 
     echo "<script>alert('Woops! Belum diisi.')</script>";
-    $sql = "INSERT INTO game (nama_game, desc_game, gambar, jml_point, jenis_point)
-                    VALUES ('$nama', '$desc', '0', '$jml', '$jenis')";
+    $sql = "INSERT INTO game (nama_game, desc_game, gambar, jml_point, jenis_point, rl_nama )
+                    VALUES ('$disp', '$desc', '$gmbr', '$jml', '$jenis', '$nama')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       echo "<script>alert('Berhasil ditambahkan')</script>";
@@ -103,10 +104,17 @@ if (isset($_POST['submit'])) {
 
             <form method="POST" action="" enctype="multipart/form-data">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="nama" required autofocus>
-                <label for="floatingInputUsername">Nama</label>
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="disp" required autofocus>
+                <label for="floatingInputUsername">Nama Display</label>
               </div>
-
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="nama" required autofocus>
+                <label for="floatingInputUsername">Nama Game</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="gmbr" required autofocus>
+                <label for="floatingInputUsername">Nama Gambar</label>
+              </div>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputUsername" placeholder="Game ini ....." name="desc">
                 <label for="floatingInputUsername">Deskripsi Game</label>
@@ -122,9 +130,9 @@ if (isset($_POST['submit'])) {
               <div class="input-group">
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis">
                   <option selected>Pilih...</option>
-                  <option value="1">Gems</option>
-                  <option value="2">Coin</option>
-                  <option value="3">Diamond</option>
+                  <option value="Gems">Gems</option>
+                  <option value="Coin">Coin</option>
+                  <option value="Diamond">Diamond</option>
                 </select>
 
 

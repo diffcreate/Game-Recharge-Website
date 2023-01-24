@@ -33,10 +33,10 @@
         </ul>
         <ul class="navbar-nav ms-auto mb-lg-0">
           <li class="nav-item">
-            <a href="#" class="link" id="menu">Home</a>
+            <a href="index.php" class="link" id="menu">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link" id="menu">Contact</a>
+            <a href="contact.php" class="link" id="menu">Contact</a>
           </li>
           <li class="nav-item">
             <?php session_start();
@@ -138,7 +138,7 @@
               echo "<div class='col-lg-2 col-md-3 col-sm-4 col-6'>";
               echo "<div class='menugame'>";
               echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . ".jpg' class='img-categori mt-4' width='200' height='200'></a>";
-              echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"mobilelegend-page.php\"'>Mobile Legend</button>";
+              echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"" . $user_data['rl_nama'] . "-page.php?GAME=" . $user_data['gambar'] . "\"'>" . $user_data['nama_game'] . "</button>";
               echo "</div>";
               echo "</div>";
             }
@@ -154,7 +154,7 @@
               echo "<div class='col-lg-2 col-md-3 col-sm-4 col-6'>";
               echo "<div class='menugame'>";
               echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . ".jpg' class='img-categori mt-4'  width='200' height='200'></a>";
-              echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"mobilelegend-page.php\"'>Mobile Legend</button>";
+              echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"" . $user_data['rl_nama'] . "-page.php?GAME=" . $user_data['gambar'] . "\"'>" . $user_data['nama_game'] . "</button>";
               echo "</div>";
               echo "</div>";
             }

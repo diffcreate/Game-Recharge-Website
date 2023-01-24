@@ -1,90 +1,67 @@
 <?php
-
 include 'config.php';
 
 error_reporting(0);
 
 session_start();
 
+
+
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: login.php");
 }
 
-include('koneksi.php');
-$query = mysqli_query($conn, "SELECT * FROM game");
-
+if (isset($_POST['submit'])) {
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $comment = $_POST['comment'];
+    $sql = "INSERT INTO contact (nama, email, comment)
+    VALUES ('$nama', '$email', '$comment')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        echo "<script>alert('Selamat, Pengisian form telah berhasil!')</script>";
+        $nama = "";
+        $email = "";
+        $comment = "";
+    } else {
+        echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+    }
+}
 ?>
-<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../style/style.css">
-<link rel="stylesheet" type="text/css" href="../fontawesome/style/all.min.css">
 
-<body>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <table border="1">
-            <tr>
-                <th>No</th>
-                <th>Gambar</th>
-                <!-- <th>Keterangan</th>
-                <th>Tipe</th>
-                <th>Ukuran</th>
-                <th>Action</th> -->
-            </tr>
-            <?php
-            $no = 1;
-            while ($row = mysqli_fetch_array($query)) {
-            ?>
-                <tr>
-                    <td><?php echo $no++; ?></td>
-                    <td><img src="data:image/jpg;base64,<?php echo base64_encode($row['gambar']); ?>" /> </td>
-                </tr>
-            <?php
-            }
-            ?>
-        </table>
-    </body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-xl-9 mx-auto">
-                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden" id="registerbox">
-                    <div class="card-img-left d-none d-md-flex">
-                        <!-- Background image for card set in CSS! -->
-                    </div>
-                    <div class="card-body p-4 p-sm-5 ">
-                        <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;">ADMIN</a>
-                        <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;" href="contact.php">|
-                            CONTACT
-                            US</a>
-                        <?php
-                        $contact = mysqli_query($conn, "SELECT * from contact");
-                        $no = 1;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../style/style-contact.css">
+</head>
 
-                        echo "<table class='table table-striped table-hover'>";
-                        echo "<tr>
-                        <th>NOMOR</th>
-                        <th>EMAIL</th>
-                        <th>TEXT</th>";
+<body style="background-color: #262626;">
+    <div class="card" style="background-color: #262626;">
+        <strong>Silahkan Isi Form Komentar ini</strong>
+        <form action="" method="POST">
+            <h1>Contact us</h1>
+            <label>Email</label><br>
+            <input class="box1" type="email" name="email" placeholder="Your Email" value="<?php echo $email; ?>" required><br>
+            <label>Nama</label><br>
+            <input class="box1" type="text" name="nama" placeholder="Your Name" value="<?php echo $nama; ?>" required><br>
+            <label>Note</label><br>
+            <textarea cols="72" rows="5" name="comment" style="background-color:#30475e;" value="<?php echo $comment; ?>" required></textarea>
 
-                        foreach ($contact as $row) {
+            <button class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" type="submit" name="submit">Submit</button>
+            <button onclick="window.location.href = ' index.php ' " class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" type="button">Back</button>
 
-                            echo "<tr>
-                            <td>$no</td>
-                            <td>" . $row['email'] . "</td>
-                            <td>" . $row['text'] . "</td>
-                        </tr>";
-                            $no++;
-                        }
-                        echo "</table>";
-                        ?>
+        </form>
 
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
 </body>
+
+</html>

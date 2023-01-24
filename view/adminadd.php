@@ -6,10 +6,10 @@ error_reporting(0);
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
+
+if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
     header("Location: index.php");
 }
-
 if (isset($_POST['submit'])) {
     $nama = $_POST['nama'];
     $desc = $_POST['desc'];
