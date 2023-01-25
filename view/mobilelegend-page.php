@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
   <link rel="stylesheet" type="text/css" href="../style/style.css">
   <link rel="stylesheet" type="text/css" href="../fontawesome/style/all.min.css">
   <script src="script.js"></script>
-  <title>Document</title>
+  <title>RexStore</title>
 </head>
 
 <body>
