@@ -75,12 +75,6 @@ if (isset($_POST['submit'])) {
                   </div>
                   <img src='captcha.php' />
                   <input id="floatingcaptcha" name='captcha_code' type='text'>
-                  <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" style="color: orange;" value="" id="rememberPasswordCheck">
-                    <label class="form-check-label" for="rememberPasswordCheck">
-                      Remember password
-                    </label>
-                  </div>
 
                   <div class="d-grid">
                     <button type="submit" class="btn btn-lg btn-outline-warning btn-login text-uppercase fw-bold mb-2" name="submit" value="submit">Accept</button>

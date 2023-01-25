@@ -73,7 +73,7 @@ if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
           </div>
           <div class="card-body p-4 p-sm-5 ">
             <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;">ADMIN</a>
-            <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;" href="contact.php">| CONTACT
+            <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;" href="lihatpesanadmin.php">| CONTACT
               US</a>
 
             <form method="POST" action="adminadd.php" enctype="multipart/form-data">
