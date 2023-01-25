@@ -10,32 +10,6 @@ if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
   header("Location: index.php");
 }
 
-if (isset($_POST['submit'])) {
-  $disp = $_POST['disp'];
-  $nama = $_POST['nama'];
-  $desc = $_POST['desc'];
-  $jml = $_POST['jml'];
-  $gmbr = $_POST['gmbr'];
-  $jenis = $_POST['jenis'];
-  $sql = "SELECT * FROM game WHERE nama_game='$nama'";
-  $result = mysqli_query($conn, $sql);
-
-  if (!$result->num_rows > 0) {
-
-    echo "<script>alert('Woops! Belum diisi.')</script>";
-    $sql = "INSERT INTO game (nama_game, desc_game, gambar, jml_point, jenis_point, rl_nama )
-                    VALUES ('$disp', '$desc', '$gmbr', '$jml', '$jenis', '$nama')";
-    $result = mysqli_query($conn, $sql);
-    if ($result) {
-      echo "<script>alert('Berhasil ditambahkan')</script>";
-    } else {
-      echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
-    }
-  } else {
-    echo "<script>alert('Tolong isi data.')</script>";
-  }
-}
-
 
 ?>
 <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
@@ -102,7 +76,7 @@ if (isset($_POST['submit'])) {
             <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;" href="contact.php">| CONTACT
               US</a>
 
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form method="POST" action="adminadd.php" enctype="multipart/form-data">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="disp" required autofocus>
                 <label for="floatingInputUsername">Nama Display</label>
@@ -134,10 +108,11 @@ if (isset($_POST['submit'])) {
                   <option value="Coin">Coin</option>
                   <option value="Diamond">Diamond</option>
                 </select>
-
-
               </div>
 
+              <div class="form-floating mb-3">
+                <input required type="file" name="berkas" id="berkas" class="mt-4">
+              </div>
               <div class="d-grid mb-2">
                 <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" type="submit" name="submit" value="submit">SUBMIT</button>
               </div>

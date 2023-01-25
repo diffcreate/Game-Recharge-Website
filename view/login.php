@@ -11,18 +11,22 @@ if (isset($_SESSION['username'])) {
 }
 
 if (isset($_POST['submit'])) {
-  $email = $_POST['email'];
-  $password = md5($_POST['password']);
+  if ($_POST["captcha_code"] == $_SESSION["captcha_code"]) {
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
 
-  $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-  $result = mysqli_query($conn, $sql);
-  if ($result->num_rows > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $_SESSION['username'] = $row['username'];
-    $_SESSION['is_admin'] = $row['is_admin'];
-    header("Location: index.php");
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+    if ($result->num_rows > 0) {
+      $row = mysqli_fetch_assoc($result);
+      $_SESSION['username'] = $row['username'];
+      $_SESSION['is_admin'] = $row['is_admin'];
+      header("Location: index.php");
+    } else {
+      echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+    }
   } else {
-    echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+    echo "<script>alert('Captcha Tidak sesuai. Silahkan coba lagi!')</script>";
   }
 }
 ?>
@@ -69,7 +73,8 @@ if (isset($_POST['submit'])) {
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
                     <label for="floatingPassword" style="color: black;">Password</label>
                   </div>
-
+                  <img src='captcha.php' />
+                  <input id="floatingcaptcha" name='captcha_code' type='text'>
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" style="color: orange;" value="" id="rememberPasswordCheck">
                     <label class="form-check-label" for="rememberPasswordCheck">
