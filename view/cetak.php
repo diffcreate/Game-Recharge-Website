@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
 	header("Location: index.php");
 }
-header('Refresh: 50	; URL=index.php');
+header('Refresh:10	; URL=index.php');
 ?>
 
 <!DOCTYPE html>

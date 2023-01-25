@@ -234,21 +234,16 @@
 
 
 
-  <!-- AKHIR NEWS -->
-
-  <!-- AWAL KEUNTUNGAN -->
-  <!-- AKHIR KEUNTUNGAN -->
-
   <div class="container mw-100" style="background-color:#00000020 ;">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 " id="">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 " id="">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 " id="">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 " id="">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 " id="">About</a></li>
       </ul>
-      <p class="text-center" id="fido">© 2022 Company, Inc</p>
+      <p class="text-center" id="">© 2022 Company, Inc</p>
     </footer>
   </div>
 </body>

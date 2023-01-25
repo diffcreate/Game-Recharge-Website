@@ -11,21 +11,22 @@ if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
 }
 
 if (isset($_POST['update'])) {
-    $id_k = $_POST['id_k'];
+    $id_k = $_POST['id'];
     $namaps = $_POST['namaps'];
     $pesan = $_POST['pesan'];
     $pbalik = $_POST['pbalik'];
-    $result = mysqli_query($conn, "UPDATE contact SET nama='$namaps',email='$pesan',comment='$pbalik' WHERE id_cp='$id_k'");
+    $result = mysqli_query($conn, "UPDATE contact SET id_cp='$id_k',nama='$namaps',email='$pesan',comment='$pbalik' WHERE id_cp='$id_k'");
     header("Location: ../lihatpesanadmin.php");
+    echo "<script>alert('Berhasil Update data')</script>";
 }
 ?>
 <?php
 $id_k = $_GET['id_k'];
 $result = mysqli_query($conn, "SELECT * FROM contact WHERE id_cp='$id_k'");
 while ($user_data = mysqli_fetch_array($result)) {
-    $namaps = $user_data['namaps'];
-    $pesan = $user_data['pesan'];
-    $pbalik = $user_data['pbalik'];
+    $namaps = $user_data['nama'];
+    $pesan = $user_data['email'];
+    $pbalik = $user_data['comment'];
 }
 ?>
 
@@ -37,7 +38,7 @@ while ($user_data = mysqli_fetch_array($result)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../style/style.css">
-    <title>Document</title>
+    <title>Rex Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
@@ -114,8 +115,9 @@ while ($user_data = mysqli_fetch_array($result)) {
                                     <label for="floatingInputUsername">Comment</label>
                                 </div>
                                 <div class="d-grid mb-2">
-                                    <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" value="Update" name="update">Update</button>
+                                    <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" value="update" name="update">Update</button>
                                 </div>
+                                <input type="hidden" name="id" value=<?php echo $id_k ?>>
                                 <div class="d-grid mb-2">
                                     <button class="btn btn-lg btn-outline-warning btn-login fw-bold text-uppercase" onclick="window.location.href = '../lihatpesanadmin.php'" type="button">Back</button>
                                 </div>
