@@ -76,7 +76,7 @@ if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
             <a class="card-title text-center mb-5 fw-light fs-5" style="color:Black;" href="lihatpesanadmin.php">| CONTACT
               US</a>
 
-            <form method="POST" action="adminadd.php" enctype="multipart/form-data">
+            <form method="POST" action="database/adminadd.php" enctype="multipart/form-data">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="disp" required autofocus>
                 <label for="floatingInputUsername">Nama Display</label>
@@ -84,10 +84,6 @@ if (!isset($_SESSION['username']) | !isset($_SESSION['is_admin'])) {
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="nama" required autofocus>
                 <label for="floatingInputUsername">Nama Game</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" name="gmbr" required autofocus>
-                <label for="floatingInputUsername">Nama Gambar</label>
               </div>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputUsername" placeholder="Game ini ....." name="desc">

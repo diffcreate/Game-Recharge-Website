@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
       <!-- Decription  -->
       <div class="col" style="height:26.34rem;">
         <div class="card d-flex justify-content-center w-100 h-100" style="top: 20px; background-color:#e8eaeb;" id="kartu_keterangan">
-          <?php echo "<img src='../assets/game/" . $_GET['GAME'] . ".jpg' class='card-img-top m-auto' style=\"width:150px;height:150px'\">" ?>
+          <?php echo "<img src='../assets/game/" . $_GET['GAME'] . "' class='card-img-top m-auto' style=\"width:150px;height:150px'\">" ?>
           <div class="card-body">
             <?php
             $game = $_GET['GAME'];

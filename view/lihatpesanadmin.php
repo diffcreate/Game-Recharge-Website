@@ -75,26 +75,26 @@ $result = mysqli_query($conn, "SELECT * FROM contact");
     <section id="top">
         <table class="table table-dark table-hover" width='80%' border=1>
             <tr>
+                <th>No</th>
                 <th>Nama</th>
+                <th>Email</th>
                 <th>Pesan</th>
-                <th>Nama Dokter</th>
-                <th>Bidang</th>
-                <th>Pesan balik</th>
                 <th>Action</th>
             </tr>
             <?php
+            $no = 1;
             while ($user_data = mysqli_fetch_array($result)) {
                 echo "<tr>";
-                echo "<td>" . $user_data['namaps'] . "</td>";
-                echo "<td>" . $user_data['pesan'] . "</td>";
+                echo "<td>" . $no . "</td>";
                 echo "<td>" . $user_data['nama'] . "</td>";
-                echo "<td>" . $user_data['bidang'] . "</td>";
-                echo "<td>" . $user_data['pbalik'] . "</td>";
-                echo "<td><a href='database/pesanupdate.php?id_k=$user_data[id_cp]'>Edit</a> | <a href='database/deleteadmin.php?id_k=$user_data[id_cp]'>Delete</a></td></tr>";
+                echo "<td>" . $user_data['email'] . "</td>";
+                echo "<td>" . $user_data['comment'] . "</td>";
+                echo "<td><a href='database/pesanupdate.php?id_k=$user_data[id_cp]'>Edit</a> | <a href='database/deleteadmin.php?id_k=$user_data[id_cp]'>Delete</a> | <a href='print.php?id_k=$user_data[id_cp]&nama=$user_data[nama]'>Print</a></td></tr>";
+                $no += 1;
             }
             ?>
         </table>
-        <div class="container mw-100" style="background-color:#00000020 ;">
+        <div class="container mw-100 fixed-bottom" style="background-color:#00000020 ;">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                     <li class="nav-item"><a href="#" class="nav-link px-2 " id="fido">Home</a></li>

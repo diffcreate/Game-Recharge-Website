@@ -137,7 +137,7 @@
             while ($user_data = mysqli_fetch_array($result)) {
               echo "<div class='col-lg-2 col-md-3 col-sm-4 col-6'>";
               echo "<div class='menugame'>";
-              echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . ".jpg' class='img-categori mt-4' width='200' height='200'></a>";
+              echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . "' class='img-categori mt-4' width='200' height='200'></a>";
               echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"" . $user_data['rl_nama'] . "-page.php?GAME=" . $user_data['gambar'] . "\"'>" . $user_data['nama_game'] . "</button>";
               echo "</div>";
               echo "</div>";
@@ -153,7 +153,7 @@
             while ($user_data = mysqli_fetch_array($result)) {
               echo "<div class='col-lg-2 col-md-3 col-sm-4 col-6'>";
               echo "<div class='menugame'>";
-              echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . ".jpg' class='img-categori mt-4'  width='200' height='200'></a>";
+              echo "<a href='#'><img src='../assets/game/" . $user_data['gambar'] . "' class='img-categori mt-4'  width='200' height='200'></a>";
               echo "<button type='button' class='btn btn-outline-warning' style='margin-top:15px;  width:180px' onclick='window.location.href = \"" . $user_data['rl_nama'] . "-page.php?GAME=" . $user_data['gambar'] . "\"'>" . $user_data['nama_game'] . "</button>";
               echo "</div>";
               echo "</div>";
